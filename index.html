@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Emoji Rain</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .emoji-rain {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100vh;
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 60px; /* Adjust the size as needed */
+      opacity: 0;
+      animation: fall linear 3s infinite, fade 3s infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fade {
+      0%,
+      100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0; /* Set your desired background color */
+    }
+
+    .centered-text {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .centered-text .enlarge {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333; /* Set your desired text color */
+      text-transform: uppercase;
+      animation: grow 1s infinite alternate; /* Define the animation */
+    }
+
+    @keyframes grow {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.4); /* Adjust the scaling factor as needed */
+      }
+    }
+  </style>
+  <body>
+    <div class="emoji-rain">
+      <div class="centered-text">
+        <p class="enlarge">WHO IS LAZY?</p>
+      </div>
+      <!-- Emojis will be added dynamically with JavaScript -->
+    </div>
+    <script>
+      const emojis = [
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+        "😉",
+      ];
+      const container = document.querySelector(".emoji-rain");
+
+      function createEmoji() {
+        const emoji = document.createElement("div");
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.classList.add("emoji");
+        emoji.style.left = `${Math.random() * 100}vw`;
+        container.appendChild(emoji);
+
+        setTimeout(() => {
+          emoji.remove();
+        }, 3000); // Adjust this value to control how long emojis stay on the screen
+      }
+
+      setInterval(createEmoji, 200); // Adjust this value to control the frequency of emojis falling
+    </script>
+  </body>
+</html>
